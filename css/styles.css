@@ -1,0 +1,326 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --clr-primary-blue: hsl(246, 80%, 60%);
+
+  /* work */
+  --clr-primary-light-red: hsl(15, 100%, 70%);
+  /* play */
+  --clr-primary-soft-blue: hsl(195, 74%, 62%);
+  /* study */
+  --clr-primary-darker-red: hsl(348, 100%, 68%);
+  /* exercise */
+  --clr-primary-lime-green: hsl(145, 58%, 55%);
+  /* social */
+  --clr-primary-violet: hsl(264, 64%, 52%);
+  /* self care */
+  --clr-primary-soft-orange: hsl(43, 84%, 65%);
+
+  --clr-neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-neutral-dark-blue: hsl(235, 46%, 20%);
+  --clr-neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-neutral-pale-blue: hsl(236, 100%, 87%);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  --font-primary: "Rubik", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  font-size: 18px;
+  color: var(--clr-white);
+  background-color: var(--clr-neutral-very-dark-blue);
+  font-family: var(--font-primary);
+}
+
+main {
+  margin: 5rem 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.user-info {
+  background: var(--clr-neutral-dark-blue);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.user-info__overview {
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.8rem;
+  border-radius: 20px;
+
+  background-color: var(--clr-primary-blue);
+}
+
+.user-info__user-img {
+  height: 4rem;
+  border: 3px solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.user-info__report {
+  color: var(--clr-neutral-pale-blue);
+  font-weight: var(--fw-300);
+  font-size: 15px;
+}
+
+.user-info__user-name {
+  font-size: 1.5rem;
+  font-weight: var(--fw-300);
+}
+
+.timeframes {
+  padding: 1.2rem 1.2rem 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeframes > .timeframe {
+  display: inline-block;
+  font-weight: var(--fw-300);
+  color: var(--clr-neutral-pale-blue);
+  transition: color 200ms ease-in;
+}
+
+.timeframes > .timeframe:hover {
+  color: var(--clr-white);
+}
+
+.user-stat {
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+}
+
+.user-stat__icon {
+  position: relative;
+  height: 2.2rem;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+
+  right: 6%;
+  top: -30%;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.user-stat__detail {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  padding: 1.5rem 1.5rem;
+  /* border-radius: 19px; */
+  background-color: var(--clr-neutral-dark-blue);
+}
+
+.user-stat__type {
+  font-weight: var(--fw-500);
+}
+
+.user-stat__time {
+  font-weight: var(--fw-300);
+  font-size: 2rem;
+}
+
+.user-stat__more-icon,
+.user-stat__time-previous {
+  justify-self: end;
+}
+
+.user-stat__time-previous {
+  font-size: 16px;
+  color: var(--clr-neutral-pale-blue);
+}
+
+.icon-work {
+  background-color: var(--clr-primary-light-red);
+}
+
+.icon-play {
+  background-color: var(--clr-primary-soft-blue);
+}
+
+.icon-study {
+  background-color: var(--clr-primary-darker-red);
+}
+
+.icon-exercise {
+  background-color: var(--clr-primary-lime-green);
+}
+
+.icon-social {
+  background-color: var(--clr-primary-violet);
+}
+
+.icon-self-care {
+  background-color: var(--clr-primary-soft-orange);
+}
+
+@media (min-width: 780px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .desktop-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .user-stat {
+    margin: 0;
+  }
+
+  .user-info {
+    margin: 0;
+  }
+
+  .user-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .user-info__overview {
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-bottom: 6rem; */
+  }
+
+  .user-info__user-img {
+    height: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .user-info__user-name {
+    line-height: 1.2;
+    max-width: 12rem;
+    font-size: 2.8rem;
+  }
+
+  .timeframes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .user-stat__detail {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .user-stat__time {
+    font-size: 3.5rem;
+  }
+
+  .user-stat__time-previous {
+    grid-column: 1/2;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .desktop-flex {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .user-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}

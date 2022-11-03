@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="desktop-flex">
+        <section class="user-info">
+          <div class="user-info__overview flex">
+            <img
+              src="images/image-jeremy.png"
+              alt="user picture"
+              class="user-info__user-img"
+            />
+            <div>
+              <p class="user-info__report">Report for</p>
+              <p class="user-info__user-name">Jeremy Robson</p>
+            </div>
+          </div>
+
+          <div class="timeframes flex">
+            <p class="timeframes__daily timeframe">Daily</p>
+            <p class="timeframes__weekly timeframe">Weekly</p>
+            <p class="timeframes__monthly timeframe">Monthly</p>
+          </div>
+        </section>
+
+        <section class="user-stats">
+          <article data-activity="work" class="user-stat">
+            <div class="user-stat__icon icon-work">
+              <img src="images/icon-work.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Work</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">32hrs</p>
+              <div class="user-stat__time-previous">Last Week - 36hrs</div>
+            </div>
+          </article>
+
+          <article data-activity="play" class="user-stat">
+            <div class="user-stat__icon icon-play">
+              <img src="images/icon-play.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Play</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">10hrs</p>
+              <div class="user-stat__time-previous">Last Week - 8hrs</div>
+            </div>
+          </article>
+
+          <article data-activity="study" class="user-stat">
+            <div class="user-stat__icon icon-study">
+              <img src="images/icon-study.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Study</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">4hrs</p>
+              <div class="user-stat__time-previous">Last Week - 7hrs</div>
+            </div>
+          </article>
+
+          <article data-activity="exercise" class="user-stat">
+            <div class="user-stat__icon icon-exercise">
+              <img src="images/icon-exercise.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Exercise</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">4hrs</p>
+              <div class="user-stat__time-previous">Last Week - 5hrs</div>
+            </div>
+          </article>
+
+          <article data-activity="social" class="user-stat">
+            <div class="user-stat__icon icon-social">
+              <img src="images/icon-social.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Social</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">5hrs</p>
+              <div class="user-stat__time-previous">Last Week - 10hrs</div>
+            </div>
+          </article>
+
+          <article data-activity="self-care" class="user-stat">
+            <div class="user-stat__icon icon-self-care">
+              <img src="images/icon-self-care.svg" alt="" class="icon" />
+            </div>
+            <div class="user-stat__detail detail-grid">
+              <p class="user-stat__type">Self Care</p>
+              <img
+                src="images/icon-ellipsis.svg"
+                alt=""
+                class="user-stat__more-icon"
+              />
+              <p class="user-stat__time">2hrs</p>
+              <div class="user-stat__time-previous">Last Week - 2hrs</div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
