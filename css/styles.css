@@ -157,14 +157,20 @@ main {
   justify-content: space-between;
 }
 
-.timeframes > .timeframe {
+.timeframe {
   display: inline-block;
+  cursor: pointer;
+
   font-weight: var(--fw-300);
   color: var(--clr-neutral-pale-blue);
   transition: color 200ms ease-in;
 }
 
 .timeframes > .timeframe:hover {
+  color: var(--clr-white);
+}
+
+.timeframe--active {
   color: var(--clr-white);
 }
 
@@ -259,6 +265,7 @@ main {
 
   .user-stat {
     margin: 0;
+    min-width: 274px;
   }
 
   .user-info {
